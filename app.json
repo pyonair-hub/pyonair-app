@@ -1,0 +1,69 @@
+{
+  "expo": {
+    "name": "Pyonair",
+    "slug": "pyonair",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "scheme": "pyonair",
+    "splash": {
+      "image": "./assets/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0F172A"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.pyonair.app",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Use Face ID to securely log in to Pyonair",
+        "NSCameraUsageDescription": "Upload photos and documents to your AI team",
+        "NSMicrophoneUsageDescription": "Send voice messages to your AI team",
+        "NSPhotoLibraryUsageDescription": "Share images with your AI team"
+      },
+      "config": {
+        "usesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.pyonair.app",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#0F172A"
+      },
+      "edgeToEdgeEnabled": true,
+      "permissions": [
+        "CAMERA",
+        "RECORD_AUDIO",
+        "READ_EXTERNAL_STORAGE",
+        "VIBRATE",
+        "RECEIVE_BOOT_COMPLETED"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      "expo-web-browser",
+      [
+        "expo-notifications",
+        {
+          "icon": "./assets/notification-icon.png",
+          "color": "#E63946"
+        }
+      ],
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Use Face ID to securely log in to Pyonair"
+        }
+      ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "pyonair-app"
+      }
+    }
+  }
+}
