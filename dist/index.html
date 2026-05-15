@@ -1,37 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-    <title>Pyonair</title>
-    <!-- The `react-native-web` recommended style reset: https://necolas.github.io/react-native-web/docs/setup/#root-element -->
-    <style id="expo-reset">
-      /* These styles make the body full-height */
-      html,
-      body {
-        height: 100%;
-      }
-      /* These styles disable body scrolling if you are using <ScrollView> */
-      body {
-        overflow: hidden;
-      }
-      /* These styles make the root element full-height */
-      #root {
-        display: flex;
-        height: 100%;
-        flex: 1;
-      }
-    </style>
-  <link rel="icon" href="/favicon.ico" /></head>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pyonair — Your AI Team</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<meta name="theme-color" content="#0F172A">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="/manifest.json">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0F172A;
+  color: #F8FAFC;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.container { max-width: 420px; width: 100%; text-align: center; }
+.logo {
+  width: 72px; height: 72px;
+  background: #E63946;
+  border-radius: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 40px;
+  font-weight: 900;
+  color: #fff;
+  letter-spacing: -2px;
+}
+h1 { font-size: 32px; font-weight: 800; letter-spacing: -1px; margin-bottom: 8px; }
+.subtitle { font-size: 16px; color: #94A3B8; line-height: 1.6; margin-bottom: 32px; }
+.cta {
+  display: block;
+  background: #E63946;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 100px;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: background 0.2s;
+}
+.cta:hover { background: #FF6B6B; }
+.secondary {
+  display: block;
+  background: rgba(255,255,255,0.08);
+  color: #CBD5E1;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 14px 32px;
+  border-radius: 100px;
+  text-decoration: none;
+  margin-bottom: 24px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.features { text-align: left; margin: 24px 0; }
+.feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.feature:last-child { border-bottom: none; }
+.dot {
+  width: 8px; height: 8px;
+  background: #E63946;
+  border-radius: 50%;
+  margin-top: 6px;
+  flex-shrink: 0;
+}
+.feature-text { font-size: 14px; color: #CBD5E1; line-height: 1.5; }
+.footer { color: #475569; font-size: 12px; margin-top: 16px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="logo">P</div>
+  <h1>Pyonair</h1>
+  <p class="subtitle">Your dedicated AI team — every skill, always available, trained on your business.</p>
 
-  <body>
-    <!-- Use static rendering with Expo Router to support running without JavaScript. -->
-    <noscript>
-      You need to enable JavaScript to run this app.
-    </noscript>
-    <!-- The root element for your Expo app. -->
-    <div id="root"></div>
-  <script src="/_expo/static/js/web/index-3bd56ed5fab8d481c719d316ca629066.js" defer></script>
+  <a href="https://pyonair.com" class="cta">Open Pyonair Portal</a>
+  <a href="https://pyonair.com/contact" class="secondary">Contact Sales</a>
+
+  <div class="features">
+    <div class="feature">
+      <div class="dot"></div>
+      <div class="feature-text">AI-powered business operations — research, proposals, content, strategy</div>
+    </div>
+    <div class="feature">
+      <div class="dot"></div>
+      <div class="feature-text">WhatsApp, HubSpot, Salesforce integrations built in</div>
+    </div>
+    <div class="feature">
+      <div class="dot"></div>
+      <div class="feature-text">Custom-trained on your business context and workflows</div>
+    </div>
+    <div class="feature">
+      <div class="dot"></div>
+      <div class="feature-text">Analytics, CRM, invoicing, automation — all in one platform</div>
+    </div>
+  </div>
+
+  <p class="footer">Pyonair Inc. | AI infrastructure for growing businesses</p>
+</div>
+
+<script>
+// PWA install prompt
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredPrompt = e;
+  // Could show install button here
+});
+</script>
 </body>
 </html>
