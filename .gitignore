@@ -1,6 +1,5 @@
 node_modules/
 .expo/
-dist/
 *.jks
 *.p8
 *.p12
