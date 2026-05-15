@@ -4,9 +4,12 @@
 FROM node:22-alpine AS builder
 WORKDIR /app
 
+# Install build dependencies for native modules (canvas)
+RUN apk add --no-cache python3 make g++ pkgconf pixman-dev cairo-dev pango-dev libjpeg-turbo-dev giflib-dev
+
 # Install dependencies first (cache layer)
 COPY package.json package-lock.json ./
-RUN npm ci --ignore-scripts
+RUN npm ci
 
 # Copy source and build web export
 COPY . .
